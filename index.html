@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/8bit-wonder" type="text/css"/>
+</head>
+<body>
+<div id="mug">
+  <div></div>
+</div>
+
+</body>
+
+<style>
+
+html, body {
+  margin: 0;
+  height: 100%;
+  overflow: hidden;
+}
+
+body {
+  background-color: #63cbe4;
+}
+
+body > div {
+  position: relative;
+  min-height: 400px;
+  font-family: '8BITWONDERNominal';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 1.2em;
+  color : rgb(48,48,48);
+}
+
+#mug {
+  width 40%;
+  min-height: 400px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+body div::before, body div::after {
+  content: "";
+  display: block;
+  position: absolute;
+}
+
+#mug div {
+  width: 140px;
+  height: 200px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 250px;
+  border-radius: 5px 5px 10px 10px ;
+  background-image: linear-gradient(to right, yellow 30px, #E0D900 140px);
+}
+
+#mug div::after {
+  width: 50px;
+  height:120px;
+  margin-left: 140px;
+  margin-top: 40px;
+  background-image: linear-gradient(to bottom, #E0D900 0px, #E0D900 15px, transparent 10px),
+  linear-gradient(to top, #E0D900 0px, #E0D900 15px, transparent 10px),
+  linear-gradient(to left, #E0D900 15px, transparent 15px);
+  border-radius: 0px 10px 10px 0px;
+}
+
+#mug div::before {
+  width: 25px;
+  height: 60px;
+  margin-top: 75px;
+  margin-left: 20px;
+  content: "Hello, World";
+}
+
+#mug div:before {
+  width: 25px;
+  height: 60px;
+  margin-top: 75px;
+  margin-left: 20px;
+  border-radius: 45px 5px;
+  box-shadow: -5px -140px 0 -2px rgba(0, 0, 0, .15),
+  35px -140px 0 -2px rgba(0, 0, 0, .15),
+  75px -140px 0 -2px rgba(0, 0, 0, .15);
+
+  animation-name: loadsteam;
+  animation-iteration-count: 100;
+  animation-timing-function: ease-in;
+  animation-duration: 2.5s;
+}
+
+@keyframes loadsteam {
+  0% {
+    box-shadow: -5px -140px 0 -2px rgba(0, 0, 0, .20),
+    35px -140px 0 -2px rgba(0, 0, 0, .06),
+    75px -140px 0 -2px rgba(0, 0, 0, .06);
+  }
+  50% {
+    box-shadow: -5px -140px 0 -2px rgba(0, 0, 0, .06),
+    35px -140px 0 -2px rgba(0, 0, 0, .20),
+    75px -140px 0 -2px rgba(0, 0, 0, .06);
+  }
+  100% {
+    box-shadow: -5px -140px 0 -2px rgba(0, 0, 0, .06),
+    35px -140px 0 -2px rgba(0, 0, 0, .06),
+    75px -140px 0 -2px rgba(0, 0, 0, .20);
+  }
+}
+
+</style>
+</html>
