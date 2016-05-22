@@ -1,0 +1,19 @@
+.bg {
+  width: 50%;
+  min-height: 400px;
+  min-width: 400px;
+  position: relative;
+  float:left;
+}
+
+body div.item::before, body div.item::after {
+  content: "";
+  display: block;
+  position: absolute;
+}
+
+html, body {
+  margin: 0;
+  height: 100%;
+  overflow: hidden;
+}
