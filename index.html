@@ -1,19 +1,85 @@
 <!doctype html>
-<html lang="en">
+<html>
 <head>
-  <title>Drawings in a Div</title>
-  <link rel="stylesheet" href="global.css" type="text/css"/>
-  <link rel="stylesheet" href="bic/bic.css" type="text/css"/>
-  <link rel="stylesheet" href="mug/mug.css" type="text/css"/>
-  <link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/8bit-wonder" type="text/css"/>
+<link href="https://fonts.googleapis.com/css?family=Overpass+Mono|Roboto:700" rel="stylesheet">
 </head>
-<body>
-<div id="mug" class="bg">
-  <div class="item"></div>
-</div>
-<div id="bic" class="bg">
-  <div class="item"></div>
-</div>
 
+<body>
+  <div class="box">
+  <div class="sam">
+    <p>
+    Sam Hunter
+    </p>
+  </div>
+
+  <div class="buttons">
+    <div class="btn">
+      About
+    </div>
+    <div class="btn">
+      Contact
+    </div>
+    <div class="btn">
+      Portfolio
+    </div>
+    <div class="btn">
+      Blog
+    </div>
+  </div>
+
+  <div class="main">
+    Hello. Welcome to my website.
+
+    <br><br>More to come...
+  </div>
+
+
+
+
+
+</div>
 </body>
+
+
 </html>
+
+<style>
+div.sam p {
+  margin-top: 75px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 36px;
+  padding: 2px 5px;
+  background: black;
+  color: #fff;
+}
+
+
+div.box {
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+
+
+div.buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+div.buttons div {
+  font-family: 'Overpass Mono', monospace;
+  font-size: 16px;
+  border: 2px solid black;
+  box-shadow: 3px 3px 0px black;
+  padding: 2px 10px;
+}
+
+div.main {
+  font-family: 'Overpass Mono', monospace;
+  font-size: 14px;
+  margin-top: 40px;
+}
+
+</style>
