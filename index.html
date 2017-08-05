@@ -55,11 +55,9 @@ div.sam p {
 
 
 div.box {
-  max-width: 400px;
+  width: 550px;
   margin: 0 auto;
 }
-
-
 
 div.buttons {
   display: flex;
@@ -70,7 +68,7 @@ div.buttons {
 
 div.buttons div {
   font-family: 'Overpass Mono', monospace;
-  font-size: 16px;
+  font-size: 1.2em;
   border: 2px solid black;
   box-shadow: 3px 3px 0px black;
   padding: 2px 10px;
@@ -80,6 +78,26 @@ div.main {
   font-family: 'Overpass Mono', monospace;
   font-size: 14px;
   margin-top: 40px;
+}
+
+@media screen and (max-device-width: 768px) {
+  div.box {
+    width: 75%;
+  }
+
+  div.buttons div {
+    font-size: 1.8em;
+  }
+
+  div.sam p {
+    font-size: 4.5em;
+    margin-top: 2em;
+  }
+
+  div.main {
+    margin-top: 2em;
+    font-size: 2em;
+  }
 }
 
 </style>
