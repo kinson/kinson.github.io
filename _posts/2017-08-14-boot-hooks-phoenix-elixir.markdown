@@ -1,8 +1,8 @@
 ---
 layout: post
 title:  "Deploying Phoenix Application with Boot Hooks"
-date:   2017-08-11 16:42:38 -0500
-categories: jekyll update
+date:   2017-08-14 16:42:38 -0500
+categories: elixir boot distillery edeliver
 ---
 ## How to use distillery to run migrations on update
 
