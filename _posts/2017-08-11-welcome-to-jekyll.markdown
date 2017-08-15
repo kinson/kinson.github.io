@@ -38,7 +38,7 @@ The post start hook is one of the boot hooks specified by distillery. A more com
 
 To begin, create a new `rel/hooks` directory and create a file `post_start[.sh]` in it.
 
-```elixir
+```sh
 set +e
 
 echo "Preparing to run migrations"
