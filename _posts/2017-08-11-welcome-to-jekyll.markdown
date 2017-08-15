@@ -6,9 +6,9 @@ categories: jekyll update
 ---
 ## How to use distillery to run migrations on update
 
-The goal of this post is two-fold, to write my first blog post that will hopefully help someone who winds up stuck in the same rut that I was in and to fill in some small holes in otherwise very helpful articles.
+The goal of this post is two-fold, to write my first blog post that will hopefully help someone who winds up stuck in the same rut that I was in and to fill in some small holes in otherwise very helpful articles. The content and a lot of references in this post come from a [post](http://blog.firstiwaslike.com/elixir-deployments-with-distillery-running-ecto-migrations/) I used to figure this out!
 
-Deploying with Phoenix is not straight forward but distillery and edeliver have made it a lot easier to manage releases and deployments without sacrificing the ability to use the hot upgrades feature. One feature which makes deployments smoother for me is automating database migrations on update - a feature that neither of these tools has out of the box. The content and a lot of references in this post come from a [post](http://blog.firstiwaslike.com/elixir-deployments-with-distillery-running-ecto-migrations/) I used to figure this out!
+Deploying with Phoenix is not straight forward but [distillery](https://github.com/bitwalker/distillery) and [edeliver](https://github.com/edeliver/edeliver) have made it a lot easier to manage releases and deployments without sacrificing the ability to use the hot upgrades feature. One feature which makes deployments smoother for me is automating database migrations on update - a feature that neither of these tools has out of the box.
 
 *Boot Hooks*, however, do come out of the box and provide a means for doing any preparation or clean up at os level via an executable. Incorporating boot hooks requires changes in three places. Before continuing make sure you have distillery and edeliver installed and the config files for each created.
 
@@ -59,7 +59,7 @@ bin/seasaltearrings rpc Elixir.Release.Tasks migrate
 echo "Migrations run successfully"
 ```
 
-This script will execute after the Elixir process has begun so it takes advantage of erlang's [rpc](http://erlang.org/doc/man/rpc.html) module to execute a task on the running process. This leads us to the last step to setting up a boot hook with Distillery and that is creating a task module in Elixir. There is no task module with the phoenix template so you will have to add one and reference in `mix.exs`. I chose to put the tasks file in `release/tasks.ex` and added release to the compile path in `mix.exs`
+This script will execute after the Elixir process has begun so it takes advantage of erlang's [rpc](http://erlang.org/doc/man/rpc.html) module to execute a task on the running process. This leads us to the last step to setting up a boot hook with Distillery and that is creating a task module in Elixir. There is no task module with the phoenix template so you will have to add one and reference in `mix.exs`. I chose to put the tasks file in `release/tasks.ex` and added release to the compile path in `mix.exs`.
 
 ```elixir
 # Specifies which paths to compile per environment.
@@ -68,7 +68,7 @@ This script will execute after the Elixir process has begun so it takes advantag
  ...
  ```
 
- The module itself simply ensures the application is running and uses the ecto migrator module to ensure that all migrations in `priv/repo/migrations` have been.
+ The module itself simply ensures the application is running and uses the ecto migrator module to ensure that all migrations in `priv/repo/migrations` have been completed.
 
  ```elixir
  defmodule Release.Tasks do
