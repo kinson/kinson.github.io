@@ -1,4 +1,3 @@
-<!doctype html>
 <html>
 <head>
 <link href="https://fonts.googleapis.com/css?family=Overpass+Mono|Roboto:700" rel="stylesheet">
@@ -27,15 +26,63 @@
     </div>
   </div>
 
-  <div class="main">
-    Hello. Welcome to my website.
-
-    <br><br>More to come...
+  <div class="wrapper">
+    <div class="bio">
+      <p> About </p>
+      <p> Born in Portland (ORE), Sam moved to Dallas to pursue his BS and MS in computer science at Southern Methodist University. He now works as a senior associate at Dialexa.</p>
+    </div>
+    <div class="pic">
+      <img src="IMG_sam.png">
+    </div>
+    <div class="spotlight-thesis">
+      <p> Spotlight: Masters Thesis </p>
+      <p> My Masters thesis, entitled "Leveraging Grammers For OpenMP Development in Supercomputing Environments", motivates and describes my thesis project, a website that provides a step by step flow to run code on a supercomputer. Each step aims to reduce the barrier to entry by attaching a graphical user interface and instructions to repeat the steps without Spur.</p>
+      <p>
+        <a href="https://github.com/kinson/spur">Code</a>
+	<a href="https://scholar.smu.edu">Thesis</a>
+      </p>
+    </div>
+    <div class="spotlight-other">
+      <p> Spotlight: Integration Testing With Kinvey Salvo </p>
+      <p> Kinvey, a mobile backend </p>
+    </div>
+    <div class="blog">
+      <p> Blog </p>
+      <ul>
+	<li><a href="https://kinson.github.io/elixir/boot/distillery/edeliver/2017/08/14/boot-hooks-phoenix-elixir.html">Deploying Phoenix Application with Boot Hooks</a></href></li>
+      </ul>
+    </div>
+    <div class="os">
+      <p> Open Source </p>
+      <ul>
+	<li>
+	  <a href="https://github.com/simonewebdesign/elixir_pubsub/pull/3">
+	    elixir/elixir_pubsub
+	  </a>
+	</li>
+	<li>
+	  <a href="https://github.com/PragTob/benchee_html/pull/32">
+	    PragTob/benchee_html
+	  </a>
+	</li>
+	<li>
+	  <a href="https://github.com/pubnub/javascript/pull/130">
+	    pubnub/javascript
+	  </a>
+	</li>
+	<li>
+	  <a href="https://github.com/dwyl/hapi-auth-jwt2/pull/276">
+	    dwyl/hapi-auth-jwt2
+	  </a>
+	</li>
+	<li>
+	  <a href="https://github.com/marnusw/bunyan-bugsnag/pull/4">
+	    marnusw/bunyan-bugsnag
+	  </a>
+	</li>
+      </ul>
+    </div>
   </div>
-
-
-
-
 
 </div>
 </body>
@@ -55,7 +102,7 @@ div.sam p {
 
 
 div.box {
-  width: 550px;
+  width: 600px;
   margin: 0 auto;
 }
 
@@ -74,12 +121,70 @@ div.buttons div {
   padding: 2px 10px;
 }
 
-div.main {
+div.wrapper {
   font-family: 'Overpass Mono', monospace;
-  font-size: 14px;
   margin-top: 40px;
+  width: 600px;
+  display: grid;
+  
+  grid-template-columns: fr fr fr fr;
+  grid-template-rows: 175px 400px 175px;
+  grid-gap: 10px;
 }
 
+div.wrapper > div {
+  border: 1px solid black;
+  box-shadow: 3px 3px 0px black;
+}
+
+div.wrapper > div.bio {
+  grid-column-start: 1;
+  grid-column-end: 4;
+}
+
+div.wrapper > div > p {
+  margin: 5px;
+}
+
+div.wrapper > div > p:first-child {
+  text-decoration: underline;
+  font-size: 1em;
+}
+
+div.wrapper > div.pic {
+  grid-column-start: 4;
+  grid-column-end: 5;
+}
+
+div.wrapper > div.pic > img {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+}
+
+div.wrapper > div.spotlight-thesis {
+  grid-column-start: 1;
+  grid-column-end: 3; 
+}
+
+div.wrapper > div.spotlight-other {
+  grid-column-start: 3;
+  grid-column-end: 5; 
+}
+
+div.wrapper > div.blog {
+  grid-column-start: 1;
+  grid-column-end: 2; 
+}
+
+div.wrapper > div > ul {
+  margin-top: 5px;
+}
+
+div.wrapper > div.os {
+  grid-column-start: 2;
+  grid-column-end: 5; 
+}
 
 div.buttons a {
   text-decoration: none;
