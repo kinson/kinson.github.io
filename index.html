@@ -1,220 +1,206 @@
 <html>
 <head>
-<link href="https://fonts.googleapis.com/css?family=Overpass+Mono|Roboto:700" rel="stylesheet">
+<title>Sam Hunter</title>
+<link href="https://fonts.googleapis.com/css?family=Overpass+Mono|Roboto:700|Roboto+Mono" rel="stylesheet">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
 <body>
-  <div class="box">
-  <div class="sam">
-    <p>
-    Sam Hunter
-    </p>
+  <div class="hero-box">
+    <div class="logo">
+      <img src="sh.png">
+      <div class="separator"></div>
+      <div class="info">
+        <p class="name">Sam Hunter</p>
+        <p class="deets">
+          <a href="https://github.com/kinson">Github</a>
+        </p>
+        <p class="deets">
+          <a href="https://kinson.github.io/blog">
+            Blog
+          </a>
+        </p>
+        <p class="deets">
+          <a href="https://linkedin.com/in/samwhunter">LinkedIn</a>
+        </p>
+      </div>
+    </div>
+
+    <div class="down-arrow" onclick="smoothScroll(document.getElementById('portfolio'))">
+      <img src="down.png">
+    </div>
   </div>
 
-  <div class="buttons">
-    <div class="btn">
-      About
-    </div>
-    <div class="btn">
-      Contact
-    </div>
-    <div class="btn">
-      Portfolio
-    </div>
-    <div class="btn">
-      <a href="blog">Blog</a>
-    </div>
-  </div>
+  <div class="about">
+    <div class="portfolio" id="portfolio">
+      <p class="header">Portfolio.</p>
+      <div id="spur">
+        <p><a href="https://github.com/kinson/spur">Spur</a></p>
+        <p>A web application, built for my Masters thesis, that generates and submits a batch file for a supercomputer, compatible with the SLURM workload manager.</p>
+      </div>
 
-  <div class="wrapper">
-    <div class="bio">
-      <p> About </p>
-      <p> Born in Portland (ORE), Sam moved to Dallas to pursue his BS and MS in computer science at Southern Methodist University. He now works as a senior associate at Dialexa.</p>
+      <div id="salvo">
+        <p><a href="https://github.com/kinson/salvo">Salvo</a></p>
+        <p>A test harness for Kinvey MBaaS with support for Oauth MIC flow and service-based integration tests.</p>
+      </div>
     </div>
-    <div class="pic">
-      <img src="IMG_sam.png">
-    </div>
-    <div class="spotlight-thesis">
-      <p> Spotlight: Masters Thesis </p>
-      <p> My Masters thesis, entitled "Leveraging Grammers For OpenMP Development in Supercomputing Environments", motivates and describes my thesis project, a website that provides a step by step flow to run code on a supercomputer. Each step aims to reduce the barrier to entry by attaching a graphical user interface and instructions to repeat the steps without Spur.</p>
-      <p>
-        <a href="https://github.com/kinson/spur">Code</a>
-	<a href="https://scholar.smu.edu">Thesis</a>
-      </p>
-    </div>
-    <div class="spotlight-other">
-      <p> Spotlight: Integration Testing With Kinvey Salvo </p>
-      <p> Kinvey, a mobile backend </p>
-    </div>
-    <div class="blog">
-      <p> Blog </p>
-      <ul>
-	<li><a href="https://kinson.github.io/elixir/boot/distillery/edeliver/2017/08/14/boot-hooks-phoenix-elixir.html">Deploying Phoenix Application with Boot Hooks</a></href></li>
-      </ul>
-    </div>
+
     <div class="os">
-      <p> Open Source </p>
-      <ul>
-	<li>
-	  <a href="https://github.com/simonewebdesign/elixir_pubsub/pull/3">
-	    elixir/elixir_pubsub
-	  </a>
-	</li>
-	<li>
-	  <a href="https://github.com/PragTob/benchee_html/pull/32">
-	    PragTob/benchee_html
-	  </a>
-	</li>
-	<li>
-	  <a href="https://github.com/pubnub/javascript/pull/130">
-	    pubnub/javascript
-	  </a>
-	</li>
-	<li>
-	  <a href="https://github.com/dwyl/hapi-auth-jwt2/pull/276">
-	    dwyl/hapi-auth-jwt2
-	  </a>
-	</li>
-	<li>
-	  <a href="https://github.com/marnusw/bunyan-bugsnag/pull/4">
-	    marnusw/bunyan-bugsnag
-	  </a>
-	</li>
-      </ul>
-    </div>
-  </div>
+      <p class="header">Open Source.</p>
+      <div class="contribs">
+        <p>
+          <a href="https://github.com/dialexa/relish/pull/26">
+            dialexa/relish
+          </a>
+        </p>
+        <p>
+          <a href="https://github.com/simonewebdesign/elixir_pubsub/pull/3">
+            elixir/elixir_pubsub
+          </a>
+        </p>
 
-</div>
+        <p>
+          <a href="https://github.com/PragTob/benchee_html/pull/32">
+            PragTob/benchee_html
+          </a>
+        </p>
+
+        <p>
+          <a href="https://github.com/pubnub/javascript/pull/130">
+            pubnub/javascript
+          </a>
+        </p>
+
+        <p>
+          <a href="https://github.com/dwyl/hapi-auth-jwt2/pull/276">
+            dwyl/hapi-auth-jwt2
+          </a>
+        </p>
+
+        <p>
+          <a href="https://github.com/marnusw/bunyan-bugsnag/pull/4">
+            marnusw/bunyan-bugsnag
+          </a>
+        </p>
+      </div>
+    </div>
+
+
+  </div>
 </body>
 
-
-</html>
-
 <style>
-div.sam p {
-  margin-top: 75px;
-  font-family: 'Roboto', sans-serif;
-  font-size: 36px;
-  padding: 2px 5px;
-  background: black;
-  color: #fff;
-}
 
-
-div.box {
-  width: 600px;
-  margin: 0 auto;
-}
-
-div.buttons {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-}
-
-div.buttons div {
-  font-family: 'Overpass Mono', monospace;
-  font-size: 1.2em;
-  border: 2px solid black;
-  box-shadow: 3px 3px 0px black;
-  padding: 2px 10px;
-}
-
-div.wrapper {
-  font-family: 'Overpass Mono', monospace;
-  margin-top: 40px;
-  width: 600px;
-  display: grid;
-  
-  grid-template-columns: fr fr fr fr;
-  grid-template-rows: 175px 400px 175px;
-  grid-gap: 10px;
-}
-
-div.wrapper > div {
-  border: 1px solid black;
-  box-shadow: 3px 3px 0px black;
-}
-
-div.wrapper > div.bio {
-  grid-column-start: 1;
-  grid-column-end: 4;
-}
-
-div.wrapper > div > p {
-  margin: 5px;
-}
-
-div.wrapper > div > p:first-child {
-  text-decoration: underline;
-  font-size: 1em;
-}
-
-div.wrapper > div.pic {
-  grid-column-start: 4;
-  grid-column-end: 5;
-}
-
-div.wrapper > div.pic > img {
-  object-fit: cover;
-  height: 100%;
-  width: 100%;
-}
-
-div.wrapper > div.spotlight-thesis {
-  grid-column-start: 1;
-  grid-column-end: 3; 
-}
-
-div.wrapper > div.spotlight-other {
-  grid-column-start: 3;
-  grid-column-end: 5; 
-}
-
-div.wrapper > div.blog {
-  grid-column-start: 1;
-  grid-column-end: 2; 
-}
-
-div.wrapper > div > ul {
-  margin-top: 5px;
-}
-
-div.wrapper > div.os {
-  grid-column-start: 2;
-  grid-column-end: 5; 
-}
-
-div.buttons a {
-  text-decoration: none;
-  color: inherit;
-}
-
-@media screen and (max-device-width: 768px) {
-  div.box {
-    width: 75%;
+  div.hero-box {
+    min-height: 100vh;
+    position: relative;
+    background-image: url("bg.png");
+    background-size: 4%;
   }
 
-  div.buttons div {
-    font-size: 1.8em;
+  div.logo {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 30%;
+    height: 190px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  div.logo img {
+    object-fit: scale-down;
+    height: 100%;
+  }
+
+  div.separator {
+    margin-left: 30px;
+    margin-right: 30px;
+    height: 90%;
+    width: 0px;
+    border: 1px solid #111111;
+  }
+
+  div.logo div.info {
+    font-family: 'Overpass Mono', monospace;
+    height: 90%;
+  }
+
+  div.logo p.name {
+    font-size: 1.5em;
+    margin-top: 0;
+  }
+
+  div.logo .deets {
+    font-size: 1.25em;
+    margin-top: 2px;
+    margin-bottom: 2px;
+  }
+
+  div.hero-box div.down-arrow {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+    position: absolute;
+    bottom: 5%;
+    left: 0;
+    right: 0;
+  }
+
+  div.hero-box div.down-arrow:hover {
+    cursor: pointer;
+  }
+
+  div.about {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+  }
+
+  div.about > div {
+    width: 600px;
+  }
+
+  div.about div p.header {
+    font-family: 'Roboto Mono', monospace;
+    font-size: 1.75em;
+    margin-top: 15px;
+  }
+
+  div.about div.portfolio div > p:first-child {
+    font-family: 'Roboto Mono', monospace;
+    font-size: 1.5em;
+  }
+
+  div.about div p {
+    font-family: 'Overpass Mono', monospace;
+    font-size: 1em;
   }
 
 
-  div.sam p {
-    font-size: 4.5em;
-    margin-top: 2em;
-  }
+  @media screen and (max-width: 600px) {
+    div.about > div {
+      width: 90%;
+    }
 
-  div.main {
-    margin-top: 2em;
-    font-size: 2em;
-  }
-}
+    div.hero-box {
+      background-size: 15%;
+    }
 
+    div.logo {
+      height: 150px;
+    }
+
+    div.logo p.name {
+      margin-bottom: 5px;
+    }
+  }
 </style>
 
 <script>
+
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
@@ -223,4 +209,28 @@ div.buttons a {
   ga('create', 'UA-105174509-1', 'auto');
   ga('send', 'pageview');
 
+  window.smoothScroll = function(target) {
+    var scrollContainer = target;
+    do {
+        scrollContainer = scrollContainer.parentNode;
+        if (!scrollContainer) return;
+        scrollContainer.scrollTop += 1;
+    } while (scrollContainer.scrollTop == 0);
+
+    var targetY = 0;
+    do {
+        if (target == scrollContainer) break;
+        targetY += target.offsetTop;
+    } while (target = target.offsetParent);
+
+    scroll = function(c, a, b, i) {
+        i++; if (i > 30) return;
+        c.scrollTop = a + (b - a) / 30 * i;
+        setTimeout(function(){ scroll(c, a, b, i); }, 8);
+    }
+    scroll(scrollContainer, scrollContainer.scrollTop, targetY, 0);
+}
+
 </script>
+
+</html>

@@ -16,7 +16,7 @@
 title: Sam Hunter's Blog
 email: me@samwhunter.com
 description: > # this means to ignore newlines until "baseurl:"
-  Just trying to learn, man.
+  Learning through writing & trying to not to make the same mistakes twice.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 github_username:  kinson
