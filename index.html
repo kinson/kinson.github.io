@@ -96,6 +96,16 @@
     position: relative;
     background-image: url("bg.png");
     background-size: 4%;
+    animation: grow 6s;
+  }
+
+  @keyframes grow {
+    0% {
+      background-size: 3%;
+    }
+    100% {
+      background-size: 4%;
+    }
   }
 
   div.logo {
@@ -178,7 +188,6 @@
     font-family: 'Overpass Mono', monospace;
     font-size: 1em;
   }
-
 
   @media screen and (max-width: 600px) {
     div.about > div {
