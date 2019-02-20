@@ -6,6 +6,7 @@
 </head>
 
 <body>
+  <div class="bg-holder"></div>
   <div class="hero-box">
     <div class="logo">
       <img src="sh.png">
@@ -91,20 +92,32 @@
 
 <style>
 
+  body {
+    background-color: #fefefe;
+  }
+
+  div.bg-holder {
+    position: absolute;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("bg.png");
+    background-size: 4%;
+    animation: fade 2s;
+    background-color: #fefefe;
+  }
+
   div.hero-box {
     min-height: 100vh;
     position: relative;
-    background-image: url("bg.png");
-    background-size: 4%;
-    animation: grow 6s;
   }
 
-  @keyframes grow {
+  @keyframes fade {
     0% {
-      background-size: 3%;
+      opacity: 0.1;
     }
     100% {
-      background-size: 4%;
+      opacity: 1;
     }
   }
 
